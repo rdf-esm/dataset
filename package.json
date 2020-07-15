@@ -1,17 +1,23 @@
 {
-  "name": "@rdfjs/dataset",
-  "version": "1.0.1",
+  "name": "@rdf-esm/dataset",
+  "version": "0.5.0",
   "description": "A basic implementation of the RDFJS Dataset",
   "main": "index.js",
+  "type": "module",
+  "exports": {
+    "require": "./index.cjs",
+    "import": "./index.js"
+  },
   "scripts": {
-    "test": "standard && mocha"
+    "lint": "standard",
+    "test": "c8 --reporter=lcov mocha --delay test/test.cjs"
   },
   "bin": {
     "rdfjs-dataset-test": "./bin/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rdfjs-base/dataset.git"
+    "url": "git://github.com/rdf-esm/dataset.git"
   },
   "keywords": [
     "rdf",
@@ -21,18 +27,21 @@
   "author": "Thomas Bergwinkl <bergi@axolotlfarm.org> (https://www.bergnet.org/people/bergi/card#me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rdfjs-base/dataset/issues"
+    "url": "https://github.com/rdf-esm/dataset/issues"
   },
-  "homepage": "https://github.com/rdfjs-base/dataset",
+  "homepage": "https://github.com/rdf-esm/dataset",
   "dependencies": {
-    "@rdfjs/data-model": "^1.1.1"
+    "@rdf-esm/data-model": "^0.5.3",
+    "@rdfjs/dataset": "^1.0.1"
   },
   "devDependencies": {
-    "@rdfjs/namespace": "^1.0.0",
-    "mocha": "^5.2.0",
-    "standard": "^12.0.1"
+    "@rdf-esm/namespace": "^0.5.1",
+    "@types/rdfjs__dataset": "^1.0.3",
+    "c8": "^7.2.1",
+    "mocha": "^8.0.1",
+    "standard": "^14.3.4"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=12"
   }
 }

@@ -1,4 +1,4 @@
-function isMatch (quad, subject, predicate, object, graph) {
+export function isMatch (quad, subject, predicate, object, graph) {
   if (subject && !quad.subject.equals(subject)) {
     return false
   }
@@ -17,5 +17,3 @@ function isMatch (quad, subject, predicate, object, graph) {
 
   return true
 }
-
-module.exports = isMatch

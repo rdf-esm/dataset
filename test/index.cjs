@@ -1,5 +1,7 @@
+'use strict'
+
 function runTests (rdf) {
-  require('./DatasetCore')(rdf)
+  require('./DatasetCore.cjs')(rdf)
 }
 
 if (global.rdf) {

@@ -1,6 +1,6 @@
-const isMatch = require('./isMatch')
+import { isMatch } from './isMatch.js'
 
-class DatasetCore {
+export class DatasetCore {
   constructor (quads) {
     this.quads = new Set()
 
@@ -61,5 +61,3 @@ class DatasetCore {
     return this.quads[Symbol.iterator]()
   }
 }
-
-module.exports = DatasetCore

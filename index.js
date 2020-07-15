@@ -1,8 +1,13 @@
-const rdf = require('@rdfjs/data-model')
-const DatasetCore = require('./DatasetCore')
+import * as DataFactory from '@rdf-esm/data-model'
+import { DatasetCore } from './DatasetCore.js'
 
-function dataset (quads) {
+export * from '@rdf-esm/data-model'
+
+export function dataset (quads) {
   return new DatasetCore(quads)
 }
 
-module.exports = Object.assign({ dataset }, rdf)
+export default {
+  dataset,
+  ...DataFactory,
+}

@@ -1,7 +1,7 @@
 /* global describe, it */
 
 const assert = require('assert')
-const namespace = require('@rdfjs/namespace')
+const namespace = require('@rdf-esm/namespace')
 
 function runTests (rdf) {
   const ex = namespace('http://example.org/', rdf)
