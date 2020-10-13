@@ -9,5 +9,5 @@ export function dataset (quads) {
 
 export default {
   dataset,
-  ...DataFactory,
+  ...DataFactory
 }
